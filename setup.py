@@ -32,6 +32,7 @@ setup(
             'odas_audio_bridge_node = VoiceClassification.odas_audio_bridge_node:main',
             'window_recorder_node = VoiceClassification.window_recorder_node:main',
             'respeaker_doa_node = VoiceClassification.respeaker_doa_node:main',
+            'inference_onnx_node = VoiceClassification.inference_onnx_node:main',
         ],
     },
 

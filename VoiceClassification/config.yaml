@@ -1,0 +1,31 @@
+data:
+  data_dir: "/mnt/ssd_p3/data/voiceclassification"        # ros2_ws/data/ 기준
+  val_ratio: 0.2
+  max_windows_per_file: 200
+  call_pattern: "통화 녹음"
+  noise_call_ratio: 0.5   
+
+buffer:
+  sample_rate: 16000
+  window_sec: 1.0
+  hop_sec: 0.5
+
+train:
+  epochs: 50
+  batch_size: 32
+  num_workers: 0
+  seed: 42
+
+optimizer:
+  lr: 0.001
+  weight_decay: 0.0001
+
+scheduler:
+  use: true
+  patience: 5                         # val loss 개선 없으면 lr 감소
+  factor: 0.5
+  min_lr: 0.00001
+
+checkpoint:
+  save_dir: "/home/lars/ros2_ws/src/VoiceClassification/VoiceClassification/checkpoints"
+  save_best_only: true                # val loss 기준 best만 저장

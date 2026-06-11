@@ -1,0 +1,14 @@
+
+# 학습 결과물
+VoiceClassification/checkpoints/
+VoiceClassification/scripts/augmented_samples/
+
+# 파이썬 캐시
+**/__pycache__/
+*.pyc
+.vscode/
+
+
+build/
+install/
+log/

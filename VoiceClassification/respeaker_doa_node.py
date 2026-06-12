@@ -29,7 +29,11 @@ class RespeakerDoaNode(Node):
 
         # ---------- 파라미터 ----------
         self.declare_parameter("rate_hz",     10.0)
-        self.declare_parameter("tuning_path", str(Path.home() / "workspace/usb_4_mic_array"))
+        self.declare_parameter(
+            "tuning_path",
+            str(Path(__file__).parent / "respeaker")  # 패키지 기준 상대경로
+        )
+
 
         rate_hz      = self.get_parameter("rate_hz").value
         tuning_path  = self.get_parameter("tuning_path").value
